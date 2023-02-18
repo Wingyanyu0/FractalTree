@@ -22,11 +22,11 @@ public void drawBranches(int x,int y, double branchLength, double angle)
   branchLength = branchLength*fractionLength;
   stroke(201,160,220);
   endX1 = (int)(branchLength*1.5*Math.cos(angle1) + x);
-  endY1 = (int)(branchLength*Math.sin(angle1) + y);
+  endY1 = (int)(branchLength*0.9*Math.sin(angle1) + y);
   line(x,y,endX1,endY1);
   stroke(255);
   endX2 = (int)(branchLength*1.5*Math.cos(angle2) + x);
-  endY2 = (int)(branchLength*Math.sin(angle2) + y);
+  endY2 = (int)(branchLength*0.9*Math.sin(angle2) + y);
   line(x,y,endX2,endY2);
   if(branchLength > smallestBranch)
   drawBranches(endX1, endY1, branchLength, angle1);
